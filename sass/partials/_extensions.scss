@@ -1,9 +1,9 @@
 // sets a global padding
 %wrap {
-  padding: 1.5em flex-gutter(6);
+  padding: 1.5rem flex-gutter(6);
   
   @include media($bp-xlg-val) {// remove the left/right padding on x-large breakpoint
-    padding: 1.5em 0;
+    padding: 1.5rem 0;
   }
 }
 
@@ -14,15 +14,14 @@
 
 // sets up the default hero styling
 %hero {
-  background: $color-secondary-pale;
-  border: 0.0625em solid $color-secondary-light;
+  background: palette(gray, x-light);
+  border: 0.0625rem solid palette(gray, light);
   border-radius: $base-border-radius;
   margin-bottom: 1.5rem;
   @include pad(1.5rem default 1.5rem default);
   
   h1, h2, h3 {
-    @extend .kilo;
-    color: $color-primary;
+    @extend .giga;
   }
 }
 

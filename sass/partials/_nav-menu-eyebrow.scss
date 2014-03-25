@@ -4,16 +4,29 @@
 // Typographic Styles //
 .menu-eyebrow {
   list-style: none;
-  text-align: right;
+  text-align: left;
   
   a {
-    color: $color-secondary-light;
+    color: palette(gray, x-light);
+    @include font-scale(mid, $font-merriweather);
     text-decoration: none;
+    //text-shadow: 0.125rem 0.125rem 0 $color-primary-dark;
     
     &:focus,
     &:hover,
     &:active {
       color: $color-white;
+    }
+    
+    &[href*="contact"] {
+      @extend .icon-phone-squared;
+      
+      &:before { color: $color-white; }
+    }
+    &[href*="linkedin"] {
+      @extend .icon-linkedin;
+      
+      &:before { color: $color-white; }
     }
   }
 }

@@ -16,3 +16,127 @@ $bp-lg: "min-width: #{$bp-lg-val}";
 //
 $bp-xlg-val: "68em";//1088px
 $bp-xlg: "min-width: #{$bp-xlg-val}";
+
+// Colors
+//////////////////////////////////////////////////
+// palette function reads a palette and a tone and returns the result
+@function palette($palette, $tone: 'base', $opacity: false) {
+  @if $opacity {
+    @return rgba(map-get(map-get($palettes, $palette), $tone), $opacity);
+  } @else {
+    @return map-get(map-get($palettes, $palette), $tone);
+  }
+}
+
+$_color-base-gray: #727a82; // our base color gray
+
+// color palettes map
+$palettes: (
+  // gray
+  gray: (
+    base:   $_color-base-gray,
+    x-light:  #dfe2e5, // pale gray
+    light:    #bec4cc, // light gray
+    dark:     #64676b, // dark gray
+    x-dark:   #323436, // black
+    
+  ),
+  
+  // blue
+  blue: (
+    base: #2A69B2,
+    light: #4588D3,
+    dark: #1E4C82
+  ),
+  
+  // green
+  green: (
+    base: #1E8021
+  ),
+  
+  // misc
+  misc: (
+    base: #FFF5E9 // ivory
+  ),
+  
+  // social
+  social: (
+    linkedin: #4875B4
+  )
+);
+
+// fonts and typography
+//////////////////////////////////////////////////
+$font-sans: 'Roboto', 'helvetica neue', helvetica, arial, sans-serif;
+
+// base rem to px
+//$base-font-size: 16;
+@function rem($px, $base: 16) {
+  @return (($px / $base) * 1)+rem;
+}
+
+// fontset feature function
+@function _fontset-feature($feature, $family: $font-default, $set: 'base', $unit: null){
+  $result: map-get(map-get($family, $set), $feature);
+  
+  @if $unit {
+    @return ($result * 1+$unit);
+  } @else {
+    @return ($result * 1);
+  }
+}
+
+// fontset family
+@function _fontset-family($family) {
+  $result: map-get($family, stack);
+  @return unquote($result);
+}
+
+// calculate font size
+@function calc-font-size($set, $family: $font-default) {
+  @return _fontset-feature(font-size, $family, $set, $unit: px);
+}
+
+// calculate line height
+@function calc-line-height($set, $family: $font-default) {
+  @return _fontset-feature(line-height, $family, $set);
+}
+
+$font-merriweather: (
+  stack: "'Merriweather', 'Droid Serif', georgia, serif",
+  
+  x-small: (
+    font-size: 12,
+    line-height: 2
+  ),
+  small: (
+    font-size: 14,
+    line-height: 1.714286
+  ),
+  base: (
+    font-size: 16,
+    line-height: 1.5
+  ),
+  mid: (
+    font-size: 18,
+    line-height: 1.333333
+  ),
+  mid-large: (
+    font-size: 24,
+    line-height: 1
+  ),
+  large: (
+    font-size: 36,
+    line-height: 1.333333
+  ),
+  x-large: (
+    font-size: 48,
+    line-height: 1
+  ),
+  xx-large: (
+    font-size: 64,
+    line-height: 1.125
+  )
+);
+
+$font-default: $font-merriweather;

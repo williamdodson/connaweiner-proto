@@ -4,7 +4,12 @@
 // Top
 //////////////////////////////////////////////////////////////////////
 .top {
-  background: $color-primary;
+  background-color: $color-primary-dark;
+  @include background(
+    linear-gradient(top, rgba($color-black, 0) 0%, rgba($color-black, 0) 97%, rgba($color-black, 0.42) 100%),
+    linear-gradient(left top, $color-secondary, $color-primary-dark)
+  );
+  border-bottom: 0.0625rem solid $color-black;
   @extend %wrap;
 }
 
@@ -31,7 +36,7 @@
 // Bottom
 //////////////////////////////////////////////////////////////////////
 .bottom {
-  background: $color-primary;
+  border-top: 0.0625rem solid palette(gray, x-light);
   @extend %wrap;
 }
 

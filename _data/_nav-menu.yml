@@ -8,5 +8,8 @@
 - name: 'Services'
   slug: 'services'
 
+- name: 'Life Sciences'
+  slug: 'life-sciences'
+
 - name: 'News'
   slug: 'news'

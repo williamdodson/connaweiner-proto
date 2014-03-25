@@ -1,14 +1,17 @@
 // Colors
 //////////////////////////////////////////////////////////////////////
-$color-primary: #343434;
-$color-primary-light: #555;
-$color-secondary: #777;
-$color-secondary-light: #999;
-$color-secondary-pale: #ddd;
-$color-white: #f3f3f3;
+$color-primary: palette(blue);
+$color-primary-light: palette(blue, light);
+$color-primary-dark: palette(blue, dark);
+$color-secondary: palette(green);
+$color-secondary-light: lighten($color-secondary, 12);
+$color-secondary-pale: lighten($color-secondary, 42);
+$color-black: palette(gray, x-dark);
+$color-white: palette(misc);
 //
-$color-links: #3366FF;
-$color-links-secondary: darken($color-links, 21);
+$color-links: $color-primary;
+$color-links-secondary: $color-primary-dark;
+$color-buttons: $color-secondary;
 //
 $color-error: #F5003D;
 $color-warning: #F5B800;

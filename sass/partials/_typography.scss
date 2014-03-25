@@ -4,14 +4,16 @@
 // Base HTML
 //////////////////////////////////////////////////////////////////////
 /* Define your base font-size here; most elements will inherit this. */
-:root, html, body {
+:root {
   font-size: 1em;
   line-height: 1.5;
 }
 
 body {
-  background: $color-white;
-  font-family: $font-stack;
+  background: palette(misc);
+  color: palette(gray, x-dark);
+  font-family: unquote(map-get($font-merriweather, stack));
+  @include font-scale(base);
 }
 
 body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
@@ -32,166 +34,94 @@ hr {
   margin-bottom: 1.5rem;
 }
 
-/* These handle massive type, for less frequently occuring bits of text (e.g. in mastheads and banners). */
-.giga {
-  @include font-size(80px);
-  line-height: 1.2; /* 96px */
-}
-.mega {
-  @include font-size(64px);
-  line-height: 1.125; /* 72px */
-}
-.kilo {
-  @include font-size(48px);
-  line-height: 1; /* 48px */
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: $color-secondary;
-  font-weight: normal;
+h1, h2, h3, h4, h5 {
+  color: palette(blue, dark);
+  font-family: unquote(map-get($font-merriweather, stack));
+  font-weight: 300;
   margin: 0;
-  text-rendering: optimizeLegibility;
+  padding: 0;
 }
-h5 {
-  text-transform: uppercase;
-}
-
-/* Define headings and their associated classes here. */
 h1, .alpha {
-  @include font-size(32px);
-  line-height: 1.5; /* 48px */
+  @include font-scale(mid-large);
+  margin-bottom: 1.5rem;
+  
+  @include media($bp-med-val) {
+    @include font-scale(large);
+  }
+  @include media($bp-lg-val) {
+    @include font-scale(x-large);
+  }
 }
 h2, .beta {
-  @include font-size(24px);
-  line-height: 1; /* 24px */
+  @include font-scale(mid);
+  
+  @include media($bp-med-val) {
+    @include font-scale(mid-large);
+  }
+  @include media($bp-lg-val) {
+    @include font-scale(large);
+  }
 }
 h3, .gamma {
-  @include font-size(20px);
-  line-height: 1.2; /* 24px */
+  @include font-scale(mid);
+  
+  @include media($bp-med-val) {
+    @include font-scale(mid);
+  }
+  @include media($bp-lg-val) {
+    @include font-scale(mid-large);
+  }
 }
 h4, .delta {
-  @include font-size(18px);
-  line-height: 1.333; /* 24px */
+  @include font-scale(base);
+  
+  @include media($bp-med-val) {
+    @include font-scale(mid);
+  }
+  @include media($bp-lg-val) {
+    @include font-scale(mid);
+  }
 }
 h5, .epsilon {
-  @include font-size(16px);
-  line-height: 1.5; /* 24px */
+  @include font-scale(base);
+}
+h5 {
+  text-transform: none;
 }
 h6, .zeta {
-  @include font-size(16px);
-  line-height: 1.5; /* 24px */
+  font-family: unquote(map-get($font-merriweather, stack));
+  @include font-scale(base);
 }
-
-/*h1 {
-  color: $color-primary;
-  font-size: 2em;
-  line-height: 1.25;
-  margin-bottom: 0.5em;
-  
-  @include media($bp-med-val) {
-    font-size: 2.5em;
-    line-height: 1.125;
-  }
-  
-  @include media($bp-lg-val) {
-    font-size: 3em;
-    line-height: 1.05;
-  }
-}
-
-h2 {
-  font-size: 1.625em;
-  line-height: 1.15384615;
-  
-  @include media($bp-med-val) {
-    font-size: 2em;
-    line-height: 1.25;
-  }
-  
-  @include media($bp-lg-val) {
-    font-size: 2.25em;
-    line-height: 1.25;
-  }
-}
-
-h3 {
-  font-size: 1.375em;
-  line-height: 1.13636364;
-  
-  @include media($bp-med-val) {
-    font-size: 1.5em;
-    line-height: 1.25;
-  }
-  
-  @include media($bp-lg-val) {
-    font-size: 1.75em;
-    line-height: 1.25;
-  }
-}
-
-h4 {
-  font-size: 1.125em;
-  line-height: 1.11111111;
-  
-  @include media($bp-med-val) {
-    line-height: 1.22222222;
-  }
-}
-
-h5 {
-  color: $color-primary;
-  font-size: 1em;
-  text-transform: uppercase;
-}
-
 h6 {
-  font-size: 1em;
   font-weight: bold;
 }
 
 p, dl, ol, ul {
-  margin: 0 0 1.5rem 0;
-  
-  @include media($bp-lg-val) {
-    margin-bottom: 1.375em;
-  }
-}*/
-
+  margin-bottom: 1.5rem;
+}
 dl {
+  margin-top: 1.5rem;
+  
   dt {
-    @extend .delta;
-    color: $color-primary-light;
-    font-weight: normal;
-    margin-top: 0;
-    @include media($bp-med-val) {
-      line-height: 1.22222222;
-    }
+    color: palette(gray);
+    @include font-scale(mid-large);
   }
   dd {
-    margin-left: 0;
     margin-bottom: 1.5rem;
-    p, ol, ul {
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
   }
 }
 
 blockquote {
-  @extend .beta;
+  color: palette(gray);
+  @include font-scale(large, $font-merriweather);
+  margin-bottom: 1.5rem;
   
-  @include media($bp-med-val) {
-    font-size: 1.5em;
-    line-height: 1.45833333;
+  cite:before {
+    content: '—';
   }
   
-  cite {
-    color: $color-secondary;
-    
-    &:before {
-      content: '— ';
-    }
+  p:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -205,10 +135,20 @@ abbr {
   cursor: help;
 }
 
-/* Smaller-than-body-copy sizes here. */
+em {
+  font-style: italic;
+}
 small, .milli {
-  @include font-size(12px);
-  line-height: 2; /* 24px */
+  @include font-scale(x-small);
+}
+strong {
+  font-weight: bold;
+}
+/*neat trick by Jeremy Keith: http://adactio.com/journal/1612/*/
+abbr[title='and'] {
+ color: palette(gray, light);
+ font-style: italic;
+ font-weight: normal;
 }
 
 // Links
@@ -276,11 +216,11 @@ hr {
 // Top
 //////////////////////////////////////////////////////////////////////
 .title {
-  @extend .gamma;
+  @extend .beta;
   margin: 0;
   
   a {
-    color: $color-white;
+    color: palette(misc);
     text-decoration: none;
   }
 }
@@ -297,28 +237,30 @@ hr {
 // Bottom
 //////////////////////////////////////////////////////////////////////
 .bottom {
-  color: $color-white;
+  color: palette(gray);
   
-  a {
+  /*a {
     color: $color-secondary;
     &:focus,
     &:hover,
     &:active {
       color: $color-white;
     }
-  }
+  }*/
 }
 
 // Classes and overrides
 //////////////////////////////////////////////////////////////////////
-// Box
-//--------------------------------------------------------------------
-.box {
+
+.giga {
+  @include font-scale(large, $font-merriweather);
+  margin: 0;
   
-  h2 {
-    font-size: 1.5em;
-    line-height: 1;
-    margin-bottom: 0.5em;
+  @include media($bp-med-val) {
+    @include font-scale(x-large, $font-merriweather);
+  }
+  @include media($bp-lg-val) {
+    @include font-scale(xx-large, $font-merriweather);
   }
 }
 
@@ -326,4 +268,17 @@ hr {
 //--------------------------------------------------------------------
 .hero {
   @extend %hero; // use an extension so that other elements can inherit the hero base styles
+}
+
+.ie-warning {
+  text-align: center;
+  p {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+}
+
+.leader {
+  @extend .gamma;
+  color: palette(gray, dark);
 }

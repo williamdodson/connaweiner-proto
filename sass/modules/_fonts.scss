@@ -1,0 +1,66 @@
+// Google Fonts
+//////////////////////////////////////////////////////////////////////
+//@import url('http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic');
+
+//
+@font-face {
+  font-family: 'fontello';
+  src: url('/a/f/fontello.eot?46683850');
+  src: url('/a/f/fontello.eot?46683850#iefix') format('embedded-opentype'),
+       url('/a/f/fontello.woff?46683850') format('woff'),
+       url('/a/f/fontello.ttf?46683850') format('truetype'),
+       url('/a/f/fontello.svg?46683850#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?46683850#fontello') format('svg');
+  }
+}
+*/
+ 
+[class^="icon-"]:before,
+[class*=" icon-"]:before,
+.menu-eyebrow a[href*="contact"]:before,
+.menu-eyebrow a[href*="linkedin"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1rem;
+  margin-right: 0.2rem;
+  text-align: center;
+  /* opacity: .8; */
+  
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1rem;
+  
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2rem;
+  
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-phone-squared:before {
+  content: '\e801';
+}
+.icon-linkedin:before {
+  content: '\e800';
+}

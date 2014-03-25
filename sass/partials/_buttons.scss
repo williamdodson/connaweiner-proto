@@ -6,12 +6,10 @@ input[type="button"].btn,
 input[type="reset"].btn,
 input[type="submit"].btn,
 .btn {
-  @include btn($color-links, $base-border-radius, $base-button-padding);
+  @include btn($color-secondary, $base-border-radius, $base-button-padding);
   border: none;
-  font-family: $font-stack;
-  font-size: 1em;
+  @include font-scale(base, $font-merriweather);
   font-weight: normal;
-  line-height: 1.25;
   vertical-align: middle;
   
   &.btn-disabled,
@@ -20,7 +18,7 @@ input[type="submit"].btn,
   }
   
   &.btn-large {
-    @include btn($color-links, $base-border-radius, 1em 1.5em);
+    @include btn($color-buttons, $base-border-radius, 1em 1.5em);
     font-size: 1.125em;
     line-height: 1.11111111;
     
@@ -30,7 +28,7 @@ input[type="submit"].btn,
   }
   
   &.btn-small {
-    @include btn($color-links, $base-border-radius, 0.25em 0.5em);
+    @include btn($color-buttons, $base-border-radius, 0.25em 0.5em);
     font-size: 0.75em;
   }
   
@@ -39,6 +37,6 @@ input[type="submit"].btn,
   }
   
   &.btn-success {
-    @include btn(darken($color-success, 7), $base-border-radius, $base-button-padding);
+    @include btn(darken($color-buttons, 7), $base-border-radius, $base-button-padding);
   }
 }

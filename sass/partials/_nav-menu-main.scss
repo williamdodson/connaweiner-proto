@@ -7,36 +7,20 @@
   text-align: left;
   
   a {
-    background: $color-primary-light;
-    border-radius: $base-border-radius;
+    border-bottom: 0.0625rem solid $color-primary-dark;
+    //background: $color-primary;
+    //border-radius: $base-border-radius;
     color: $color-white;
     display: block;
-    @include font-size(16px);
-    line-height: 1.5;
+    @include font-scale(mid, $font-merriweather);
     text-decoration: none;
   }
-  
-  li {
-    
-    &.parent > a {
-      &:after {
-        color: lighten($color-secondary, 12);
-        content: '\25bc';//BLACK DOWN-POINTING TRIANGLE
-        font-size: 0.625em; 
-        margin-left: 1em;
-      }
-    }
-    
-    ul {
-      list-style: none;
-    }
-  }// end li
 }
 
 // Layout-Specific Styles //
 .menu-main {
-  margin: 0;
-  @include margin(24px, 0, 24px, 0);
+  margin: 0 0 1.5rem 0;
+  //@include margin(24px, 0, 24px, 0);
   padding: 0;
   
   li {
@@ -45,12 +29,12 @@
     
     a {
       display: block;
-      padding: 0.75em 1.5em;
+      padding: 0;
       
       &:focus,
       &:hover,
       &:active {
-        background: $color-secondary;
+        background: $color-primary-dark;
       }
     }
     
