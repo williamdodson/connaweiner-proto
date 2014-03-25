@@ -1,0 +1,11 @@
+<ul class="menu-eyebrow">
+  {% for p in site.data._nav-eyebrow %}
+  <li>
+    {% if p.url %}
+    <a href="{{ p.url }}">{{ p.name }}</a>
+    {% else %}
+    <a href="/{{ p.slug }}/">{{ p.name }}</a>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

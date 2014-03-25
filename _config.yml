@@ -1,0 +1,5 @@
+name: Conna Weiner
+markdown: redcarpet
+destination: public
+encoding: UTF-8
+exclude: ['sass', 'README.md', 'notes.txt']

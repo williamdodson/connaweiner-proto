@@ -1,0 +1,12 @@
+# Define your main navigation links and their slugs here
+- name: 'Home'
+  slug: 
+
+- name: 'About'
+  slug: 'about'
+
+- name: 'Services'
+  slug: 'services'
+
+- name: 'News'
+  slug: 'news'

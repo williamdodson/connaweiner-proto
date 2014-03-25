@@ -1,0 +1,9 @@
+# Define your eyebrow navigation links and their slugs here
+- name: 'Contact'
+  slug: 'contact'
+
+- name: 'LinkedIn'
+  url: 'http://www.linkedin.com/in/connaweiner'
+
+- name: 'Style Guide'
+  slug: 'style-guide'
