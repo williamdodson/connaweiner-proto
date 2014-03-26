@@ -35,7 +35,7 @@ hr {
 }
 
 h1, h2, h3, h4, h5 {
-  color: palette(blue, dark);
+  color: $color-secondary;
   font-family: unquote(map-get($font-merriweather, stack));
   font-weight: 300;
   margin: 0;
@@ -218,10 +218,16 @@ hr {
 .title {
   @extend .beta;
   margin: 0;
+  text-align: center;
   
   a {
     color: palette(misc);
     text-decoration: none;
+    text-shadow: 0.125rem 0.125rem 0 rgba($color-black, 0.42);
+  }
+  
+  @include media($bp-med-val) {
+    text-align: left;
   }
 }
 
@@ -237,16 +243,16 @@ hr {
 // Bottom
 //////////////////////////////////////////////////////////////////////
 .bottom {
-  color: palette(gray);
+  color: palette(misc);
   
-  /*a {
-    color: $color-secondary;
+  a {
+    color: $color-primary-light;
     &:focus,
     &:hover,
     &:active {
       color: $color-white;
     }
-  }*/
+  }
 }
 
 // Classes and overrides

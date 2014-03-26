@@ -4,13 +4,23 @@
 // Top
 //////////////////////////////////////////////////////////////////////
 .top {
-  background-color: $color-primary-dark;
-  @include background(
-    linear-gradient(top, rgba($color-black, 0) 0%, rgba($color-black, 0) 97%, rgba($color-black, 0.42) 100%),
-    linear-gradient(left top, $color-secondary, $color-primary-dark)
-  );
-  border-bottom: 0.0625rem solid $color-black;
   @extend %wrap;
+  background-color: palette(gray, x-dark);
+  @include background(
+    linear-gradient(left top, palette(blue, dark), palette(gray, x-dark))
+  );
+  border-bottom: 0.75rem solid palette(green);
+  position: relative;
+  
+  &:after {
+    background: palette(blue);
+    bottom: -1.5rem;
+    content: ' ';
+    height: 0.75rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
 }
 
 .masthead {
@@ -27,6 +37,7 @@
 //////////////////////////////////////////////////////////////////////
 .primary {
   @extend %wrap;
+  padding-top: 3rem;
   
 }
 .container {
@@ -36,7 +47,7 @@
 // Bottom
 //////////////////////////////////////////////////////////////////////
 .bottom {
-  border-top: 0.0625rem solid palette(gray, x-light);
+  background-color: palette(gray, x-dark);
   @extend %wrap;
 }
 

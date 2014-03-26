@@ -6,11 +6,22 @@
   list-style: none;
   text-align: left;
   
+  li {
+    border-bottom: 0.0625rem dotted rgba(palette(blue, light), 0.7);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    
+    &:last-child {
+      border: none;
+    }
+  }
+  
   a {
     color: palette(gray, x-light);
+    display: block;
     @include font-scale(mid, $font-merriweather);
     text-decoration: none;
-    //text-shadow: 0.125rem 0.125rem 0 $color-primary-dark;
+    text-shadow: 0.125rem 0.125rem 0 rgba($color-black, 0.42);
     
     &:focus,
     &:hover,
@@ -21,13 +32,37 @@
     &[href*="contact"] {
       @extend .icon-phone-squared;
       
-      &:before { color: $color-white; }
+      &:before {
+        color: lighten(palette(green), 42);
+        font-size: 1.5rem;
+        margin-right: 0.75rem;
+      }
     }
     &[href*="linkedin"] {
       @extend .icon-linkedin;
       
-      &:before { color: $color-white; }
+      &:before {
+        color: lighten(palette(blue, light), 21);
+        font-size: 1.5rem;
+        margin-right: 0.75rem;
+      }
     }
+  } // end a
+  
+  // Medium layout
+  @include media($bp-med-val) {
+    text-align: right;
+    
+    li {
+      border-right: 0.0625rem dotted rgba(palette(blue, light), 0.7);
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      
+      &:last-child {
+        border: none;
+      }
+    } // end li
   }
 }
 
@@ -36,7 +71,25 @@
   margin: 0;
   padding: 0;
   
-  a {
-    display: block;
+  // Medium layout
+  @include media($bp-med-val) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+    li {
+      display: inline-block;
+      margin-right: 0.25rem;
+      padding-right: 0.75rem;
+      
+      &:last-child {
+        margin-right: 0;
+        padding-right: 0;
+      }
+    } // end li
+    
+    a {
+      display: block;
+    }
   }
 }
