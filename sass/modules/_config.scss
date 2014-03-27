@@ -1,6 +1,6 @@
 // Basic configuration and overrides
 //////////////////////////////////////////////////////////////////////
-$base-border-radius: 0.25rem;
+$base-border-radius: 0.5rem;
 $base-line-height: 1.5;
 $transition-speed: 0.3s;
 $base-button-padding: 0.625rem 1rem;
@@ -102,7 +102,7 @@ $palettes: (
   @return _fontset-feature(line-height, $family, $set);
 }
 
-$font-merriweather: (
+$font-open-sans: (
   stack: "'Open Sans', 'Droid Sans', calibri, arial, sans-serif",
   
   x-small: (
@@ -139,4 +139,4 @@ $font-merriweather: (
   )
 );
 
-$font-default: $font-merriweather;
+$font-default: $font-open-sans;

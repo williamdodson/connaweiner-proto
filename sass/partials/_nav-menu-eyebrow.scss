@@ -19,7 +19,7 @@
   a {
     color: palette(gray, x-light);
     display: block;
-    @include font-scale(mid, $font-merriweather);
+    @include font-scale(mid, $font-open-sans);
     text-decoration: none;
     text-shadow: 0.125rem 0.125rem 0 rgba($color-black, 0.42);
     

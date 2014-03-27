@@ -12,7 +12,7 @@
 body {
   background: palette(misc);
   color: palette(gray, x-dark);
-  font-family: unquote(map-get($font-merriweather, stack));
+  font-family: unquote(map-get($font-open-sans, stack));
   @include font-scale(base);
 }
 
@@ -35,9 +35,9 @@ hr {
 }
 
 h1, h2, h3, h4, h5 {
-  color: palette(gray, dark);
-  font-family: unquote(map-get($font-merriweather, stack));
-  font-weight: 700;
+  color: palette(blue, dark);
+  font-family: unquote(map-get($font-open-sans, stack));
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
@@ -51,9 +51,6 @@ h1, .alpha {
   @include media($bp-lg-val) {
     @include font-scale(x-large);
   }
-}
-h1 {
-  color: palette(blue);
 }
 h2, .beta {
   @include font-scale(mid);
@@ -89,15 +86,16 @@ h5, .epsilon {
   @include font-scale(base);
 }
 h5 {
-  font-weight: 300;
-  text-transform: none;
+  color: palette(gray, dark);
+  font-weight: 700;
 }
 h6, .zeta {
-  font-family: unquote(map-get($font-merriweather, stack));
+  font-family: unquote(map-get($font-open-sans, stack));
   @include font-scale(base);
 }
 h6 {
-  font-weight: bold;
+  color: palette(gray, dark);
+  font-weight: 700;
 }
 
 p, dl, ol, ul {
@@ -114,10 +112,14 @@ dl {
     margin-bottom: 1.5rem;
   }
 }
+ol,
+ul {
+  padding-left: 1rem;
+}
 
 blockquote {
   color: palette(gray);
-  @include font-scale(large, $font-merriweather);
+  @include font-scale(large, $font-open-sans);
   margin-bottom: 1.5rem;
   
   cite:before {
@@ -212,6 +214,18 @@ table {
 
 // Misc
 //////////////////////////////////////////////////////////////////////
+img,
+embed,
+object,
+video {
+	max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 hr {
   border: none;
   border-top: 0.0625em solid $color-secondary-light;
@@ -239,6 +253,18 @@ hr {
 //////////////////////////////////////////////////////////////////////
 .primary {
   
+  li {
+    border-bottom: 0.0625rem solid palette(gray, x-light);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.6875rem;
+    
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  
   a {
     text-decoration: underline;
   }
@@ -246,13 +272,14 @@ hr {
 
 .heading-main {
   h1 {
-    @extend .giga;
-    color: palette(blue, dark);
+    margin-bottom: 0;
     text-shadow: 0.125rem 0.125rem 0 rgba($color-black, 0.12);
   }
   .lead-in {
     @extend .gamma;
     color: palette(gray);
+    font-style: italic;
+    margin-bottom: 0;
   }
 }
 
@@ -279,16 +306,21 @@ hr {
 
 // Classes and overrides
 //////////////////////////////////////////////////////////////////////
+.headshot {
+  margin-bottom: 1.5rem;
+  
+  img {
+    border: 0.25rem solid palette(gray, light);
+    border-radius: $base-border-radius;
+  }
+}
 
 .giga {
-  @include font-scale(large, $font-merriweather);
+  @include font-scale(large, $font-open-sans);
   margin: 0;
   
   @include media($bp-med-val) {
-    @include font-scale(x-large, $font-merriweather);
-  }
-  @include media($bp-lg-val) {
-    @include font-scale(xx-large, $font-merriweather);
+    @include font-scale(x-large, $font-open-sans);
   }
 }
 

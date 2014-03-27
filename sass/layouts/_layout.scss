@@ -41,13 +41,13 @@
 }
 
 .heading-main {
+  @extend %wrap;
   background-color: palette(gray, x-light);
   @include background(
     linear-gradient(left top, palette(gray, x-light), palette(misc))
   );
   border-top: 0.75rem solid palette(blue);
   margin-bottom: 1.5rem;
-  padding: 1.5rem 0;
   
   header {
     @extend %container;
