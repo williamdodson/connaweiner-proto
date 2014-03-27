@@ -6,6 +6,15 @@
   list-style: none;
   text-align: left;
   
+  li {
+    
+    &.current-page-item {
+      a {
+        background: palette(green);
+      }
+    }
+  }
+  
   a {
     background: $color-primary;
     border-radius: $base-border-radius;

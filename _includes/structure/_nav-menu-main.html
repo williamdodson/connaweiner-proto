@@ -1,7 +1,7 @@
 <ul class="menu-main">
   {% for p in site.data._nav-menu %}
-  <li{% if p.subpages %} class="parent"{% endif %}>
-    <a href="{% if p.slug %}/{{ p.slug }}/{% else %}/{% endif %}">{{ p.name }}</a>
+  <li{% if  p.slug == page.slug %} class="current-page-item"{% endif %}>
+    <a href="{% if p.slug != 'home' %}/{{ p.slug }}/{% else %}/{% endif %}">{{ p.name }}</a>
     {% if p.subpages %}
     <ul>
       {% for s in p.subpages %}

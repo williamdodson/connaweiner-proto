@@ -33,7 +33,7 @@
       @extend .icon-phone-squared;
       
       &:before {
-        color: lighten(palette(green), 42);
+        color: palette(green, x-light);
         font-size: 1.5rem;
         margin-right: 0.75rem;
       }

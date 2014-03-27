@@ -1,6 +1,6 @@
 # Define your main navigation links and their slugs here
 - name: 'Home'
-  slug: 
+  slug: 'home'
 
 - name: 'About'
   slug: 'about'

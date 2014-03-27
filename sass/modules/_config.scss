@@ -1,10 +1,9 @@
 // Basic configuration and overrides
 //////////////////////////////////////////////////////////////////////
-$base-border-radius: 0.25em;
+$base-border-radius: 0.25rem;
 $base-line-height: 1.5;
-$font-stack: 'helvetica neue', helvetica, arial, sans-serif;
 $transition-speed: 0.3s;
-$base-button-padding: 0.625em 1em;
+$base-button-padding: 0.625rem 1rem;
 
 // set manual breakpoint variables
 //////////////////////////////////////////////////////////////////////
@@ -51,7 +50,9 @@ $palettes: (
   
   // green
   green: (
-    base: #1E8021
+    base: #1E8021,
+    light: #2AB22E,
+    x-light: #8FE592
   ),
   
   // misc
@@ -102,7 +103,7 @@ $palettes: (
 }
 
 $font-merriweather: (
-  stack: "'Merriweather', 'Droid Serif', georgia, serif",
+  stack: "'Open Sans', 'Droid Sans', calibri, arial, sans-serif",
   
   x-small: (
     font-size: 12,

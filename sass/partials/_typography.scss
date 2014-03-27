@@ -35,9 +35,9 @@ hr {
 }
 
 h1, h2, h3, h4, h5 {
-  color: $color-secondary;
+  color: palette(gray, dark);
   font-family: unquote(map-get($font-merriweather, stack));
-  font-weight: 300;
+  font-weight: 700;
   margin: 0;
   padding: 0;
 }
@@ -51,6 +51,9 @@ h1, .alpha {
   @include media($bp-lg-val) {
     @include font-scale(x-large);
   }
+}
+h1 {
+  color: palette(blue);
 }
 h2, .beta {
   @include font-scale(mid);
@@ -86,6 +89,7 @@ h5, .epsilon {
   @include font-scale(base);
 }
 h5 {
+  font-weight: 300;
   text-transform: none;
 }
 h6, .zeta {
@@ -237,6 +241,24 @@ hr {
   
   a {
     text-decoration: underline;
+  }
+}
+
+.heading-main {
+  h1 {
+    @extend .giga;
+    color: palette(blue, dark);
+    text-shadow: 0.125rem 0.125rem 0 rgba($color-black, 0.12);
+  }
+  .lead-in {
+    @extend .gamma;
+    color: palette(gray);
+  }
+}
+
+.ancillary {
+  h2 {
+    @extend .gamma;
   }
 }
 
