@@ -212,6 +212,15 @@ table {
   }
 }
 
+// Forms
+//////////////////////////////////////////////////////////////////////
+form, input, textarea, button {
+  @include font-scale(base, $font-open-sans)
+}
+label {
+  display: block;
+}
+
 // Misc
 //////////////////////////////////////////////////////////////////////
 img,
@@ -322,6 +331,15 @@ hr {
   @include media($bp-med-val) {
     @include font-scale(x-large, $font-open-sans);
   }
+}
+
+.hide {
+  @extend %visuallyhidden;
+}
+
+.required {
+  color: palette(green);
+  font-weight: bold;
 }
 
 // Hero
