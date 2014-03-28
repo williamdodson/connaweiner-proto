@@ -1239,14 +1239,16 @@ hr {
   margin-bottom: 0;
 }
 
-.content p, .content dl, .content ol, .content ul {
-  font-size: 18px;
-  /* font-size: 18 */
-  font-size: 1.125rem;
-  line-height: 1.33333;
-}
 .content .leader {
   color: #64676b;
+}
+@media screen and (min-width: 55em) {
+  .content p, .content dl, .content ol, .content ul {
+    font-size: 18px;
+    /* font-size: 18 */
+    font-size: 1.125rem;
+    line-height: 1.33333;
+  }
 }
 
 .bottom {

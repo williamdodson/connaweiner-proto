@@ -303,13 +303,16 @@ hr {
 }
 
 .content {
-  p, dl, ol, ul {
-    @include font-scale(mid);
-  }
   
   .leader {
     @extend .gamma;
     color: palette(gray, dark);
+  }
+  
+  @include media($bp-lg-val) {
+    p, dl, ol, ul {
+      @include font-scale(mid);
+    }
   }
 }
 
