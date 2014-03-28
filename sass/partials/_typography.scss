@@ -88,6 +88,7 @@ h5, .epsilon {
 h5 {
   color: palette(gray, dark);
   font-weight: 700;
+  text-transform: uppercase;
 }
 h6, .zeta {
   font-family: unquote(map-get($font-open-sans, stack));
@@ -101,8 +102,10 @@ h6 {
 p, dl, ol, ul {
   margin-bottom: 1.5rem;
 }
-dl {
+dl, ol, ul {
   margin-top: 1.5rem;
+}
+dl {
   
   dt {
     color: palette(gray);
@@ -110,17 +113,24 @@ dl {
   }
   dd {
     margin-bottom: 1.5rem;
+    margin-left: 0;
   }
 }
-ol,
+ol {
+  padding-left: 1.5rem;
+}
 ul {
   padding-left: 1rem;
 }
 
 blockquote {
   color: palette(gray);
-  @include font-scale(large, $font-open-sans);
   margin-bottom: 1.5rem;
+  margin-left: 0;
+  
+  p {
+    @include font-scale(large, $font-open-sans);
+  }
   
   cite:before {
     content: '—';
@@ -204,10 +214,10 @@ table {
   
   tbody {
     tr {
-      border-bottom: 0.0625em solid lighten($color-secondary-light, 12);
+      border-bottom: 0.0625em solid palette(gray, light);
     }
     tr:nth-child(even) {
-      background: $color-secondary-pale;
+      background: palette(gray, x-light);
     }
   }
 }
@@ -237,7 +247,7 @@ figure {
 
 hr {
   border: none;
-  border-top: 0.0625em solid $color-secondary-light;
+  border-top: 0.0625em solid palette(gray, light);
 }
 
 // Top
@@ -289,6 +299,17 @@ hr {
     color: palette(gray);
     font-style: italic;
     margin-bottom: 0;
+  }
+}
+
+.content {
+  p, dl, ol, ul {
+    @include font-scale(mid);
+  }
+  
+  .leader {
+    @extend .gamma;
+    color: palette(gray, dark);
   }
 }
 
@@ -354,9 +375,4 @@ hr {
     font-weight: bold;
     margin-bottom: 0;
   }
-}
-
-.leader {
-  @extend .gamma;
-  color: palette(gray, dark);
 }

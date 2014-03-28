@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/a/c/style.css">
+    <!-- scripts that required HEAD placement -->
+    <script src="/a/j/responsive-nav/responsive-nav.min.js"></script>
   </head>
   
   <body>
@@ -15,8 +17,11 @@
       <header class="masthead" role="banner">
         <h1 class="title"><a href="/">{{ site.name }}</a></h1>
         
-        <nav class="nav" role="navigation">
+        <nav class="nav nav-collapse" role="navigation">
           {% include structure/_nav-menu-main.html %}
+        </nav>
+        
+        <nav class="nav" role="navigation">
           {% include structure/_nav-menu-eyebrow.html %}
         </nav>
       </header>

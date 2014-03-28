@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/a/c/style.css">
+    <!-- scripts that required HEAD placement -->
+    <script src="/a/j/responsive-nav/responsive-nav.min.js"></script>
   </head>
   
   <body>
@@ -15,7 +17,7 @@
       <header class="masthead" role="banner">
         <h1 class="title"><a href="/">Conna Weiner ADR</a></h1>
         
-        <nav class="nav" role="navigation">
+        <nav class="nav nav-collapse" role="navigation">
           <ul class="menu-main">
   
   <li>
@@ -44,6 +46,9 @@
   </li>
   
 </ul>
+        </nav>
+        
+        <nav class="nav" role="navigation">
           <ul class="menu-eyebrow">
   
   <li>
@@ -68,7 +73,7 @@
     <div class="heading-main">
       <header>
         <h1>Style Guide</h1>
-        
+        <p class="lead-in">A page containing nearly every element defined in the CSS styles</p>
       </header>
     </div>
     <!-- /.heading-main -->
@@ -77,9 +82,7 @@
     <div class="primary">
       <div class="container">
         <main class="content" role="main">
-          <h1>Style Guide</h1>
-
-<p>This page contains nearly every element defined in the wireframe CSS styles.</p>
+          <p>This page contains nearly every element defined in the CSS styles. It is meant to demonstrate the various heading sizes, paragraphs, lists, and other items like forms and tables. While you may never use some of these items they are in place to be used when needed.</p>
 
 <section aria-labelledby="typography">
   <h2 id="typography">Typography</h2>
@@ -151,43 +154,6 @@
     <input class="btn" type="reset" value="Form Reset Button">
     <input class="btn" disabled="disabled" type="submit" value="Disabled Form Button">
   </p>
-</section>
-<section aria-labelledby="flashes">
-  <h2 id="flashes">Flashes &amp; Error Messages</h2>
-  <div class="flash-success">
-    <span>This is a success message <a href="#">with a link</a></span>
-  </div>
-  <div class="flash-error">
-    <span>This is an error message <a href="#">with a link</a></span>
-  </div>
-  <div class="flash-notice">
-    <span>This is an notice message <a href="#">with a link</a></span>
-  </div>
-</section>
-<section aria-labelledby="labels-badges">
-  <h2 id="labels-badges">Labels &amp; Badges</h2>
-  <h3>Labels</h3>
-  <ul>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="label label-default">Default</span></li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="label label-note">Note</span></li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="label label-success">Success</span></li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="label label-warning">Warning</span></li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="label label-danger">Danger</span></li>
-    <li>
-      <h1>This is a Test Heading <span class="label label-note">v1.2.3</span></h1>
-    </li>
-    <li>
-      <h2>Donec Nec Justo Eget Felis <span class="label label-danger">A really long label</span></h2>
-    </li>
-  </ul>
-  
-  <h3>Badges</h3>
-  <ul>
-    <li><a href="#">Notifications <span class="badge badge-default">12</span></a></li>
-    <li>Hot Badge Style <span class="badge badge-hot">7</span></li>
-    <li>Cool Badge Style <span class="badge badge-cool">7</span></li>
-    <li><a href="#">Your Should Check Your Messages! <span class="badge badge-note">432</span></a></li>
-  </ul>
 </section>
 
 <hr>
@@ -347,13 +313,13 @@
   <img alt="Photo of Conna Weiner" src="/a/i/conna-weiner.jpg">
 </figure>
 
+<p><a href="http://adr.org/"><img alt="American Arbitration Association" src="/a/i/AAA-logo-2014.png"></a></p>
+
 <h2>Work with Conna</h2>
 
 <p>Ms. Weiner is a member of the <a href="http://adr.org/">American Arbitration Association</a> Commercial Panel of Arbitrators, mediates regularly and was awarded an ADR Higginbotham Fellowship by the AAA in 2013. Please click on the pages above to learn more about Ms. Weiner’s background and experience. </p>
 
 <p><a class="btn btn-large" href="/about/">Learn More about Conna</a></p>
-
-<a href="http://adr.org/"><img alt="American Arbitration Association" src="/a/i/AAA-logo-2014.png"></a>
         </aside>
       </div>
     </div>
