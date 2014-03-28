@@ -7,20 +7,11 @@
   @extend %wrap;
   background-color: palette(gray, x-dark);
   @include background(
+    url('/a/i/header-tile-bg.png') repeat-y 100% 0,
     linear-gradient(left top, palette(blue, dark), palette(gray, x-dark))
   );
   border-bottom: 0.75rem solid palette(green);
   position: relative;
-  
-  /*&:after {
-    background: palette(blue);
-    bottom: -1.5rem;
-    content: ' ';
-    height: 0.75rem;
-    left: 0;
-    position: absolute;
-    right: 0;
-  }*/
 }
 
 .masthead {

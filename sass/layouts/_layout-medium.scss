@@ -1,2 +1,11 @@
 // Tablet and small desktop layout
 //////////////////////////////////////////////////////////////////////
+// Top
+//////////////////////////////////////////////////////////////////////
+.top {
+  background-color: palette(gray, x-dark);
+  @include background(
+    url('/a/i/header-tile-bg-medium.png') repeat-y 100% 0,
+    linear-gradient(left top, palette(blue, dark), palette(gray, x-dark))
+  );
+}

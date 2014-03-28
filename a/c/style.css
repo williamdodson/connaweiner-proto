@@ -1647,19 +1647,10 @@ input[type="submit"].btn.btn-success:active,
 
 .top {
   background-color: #323436;
-  background: -webkit-linear-gradient(left top, #1e4c82, #323436);
-  background: linear-gradient(to right bottom, #1e4c82, #323436);
+  background: url("/a/i/header-tile-bg.png") repeat-y 100% 0, -webkit-linear-gradient(left top, #1e4c82, #323436);
+  background: url("/a/i/header-tile-bg.png") repeat-y 100% 0, linear-gradient(to right bottom, #1e4c82, #323436);
   border-bottom: 0.75rem solid #1e8021;
   position: relative;
-  /*&:after {
-    background: palette(blue);
-    bottom: -1.5rem;
-    content: ' ';
-    height: 0.75rem;
-    left: 0;
-    position: absolute;
-    right: 0;
-  }*/
 }
 
 .masthead {
@@ -1694,7 +1685,20 @@ input[type="submit"].btn.btn-success:active,
   background-color: #323436;
 }
 
+@media only screen and (min-width: 40em) {
+  .top {
+    background-color: #323436;
+    background: url("/a/i/header-tile-bg-medium.png") repeat-y 100% 0, -webkit-linear-gradient(left top, #1e4c82, #323436);
+    background: url("/a/i/header-tile-bg-medium.png") repeat-y 100% 0, linear-gradient(to right bottom, #1e4c82, #323436);
+  }
+}
 @media only screen and (min-width: 55em) {
+  .top {
+    background-color: #323436;
+    background: url("/a/i/header-tile-bg-large.png") repeat-y 100% 0, -webkit-linear-gradient(left top, #1e4c82, #323436);
+    background: url("/a/i/header-tile-bg-large.png") repeat-y 100% 0, linear-gradient(to right bottom, #1e4c82, #323436);
+  }
+
   .content {
     float: left;
     display: block;
