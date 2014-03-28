@@ -6,12 +6,11 @@
   width: 100%;
   display: block;
   list-style: none;
+  
+  @include media($bp-med-val) {
+    margin: 1.5rem 0;
+  }
 }
-
-/*.nav-collapse li {
-  width: 100%;
-  display: block;
-}*/
 
 .js .nav-collapse {
   clip: rect(0 0 0 0);
@@ -23,9 +22,9 @@
 }
 
 .nav-collapse.opened,
-.js .nav-collapse-0.opened {
-  outline: 1px solid red;
+.js .nav-collapse.opened {
   max-height: 9999px;
+  margin: 1rem 0;
 }
 
 .disable-pointer-events {
@@ -34,9 +33,16 @@
 
 .nav-toggle {
   background: palette(blue, light);
-  color: palette(misc) !important;
+  border: 0.0625rem solid palette(blue, x-light);
+  border-radius: $base-border-radius;
+  color: $color-white !important;
+  @include font-scale(mid, $font-open-sans);
   display: block;
-  text-align: center;
+  margin: 0.75rem 0;
+  padding: 0.25rem 1rem;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: 0.125rem 0.125rem 0 rgba($color-black, 0.21);
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -44,6 +50,32 @@
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+.icon-menu {
+  background: palette(blue, xx-light);
+  display: inline-block;
+  height: 0.1875rem;
+  margin-top: -0.25rem;
+  margin-right: 0.25rem;
+  position: relative;
+  vertical-align: middle;
+  width: 1.25rem;
+  
+  &::after,
+  &::before {
+    background: palette(blue, xx-light);
+    content: '';
+    height: 0.1875rem;
+    left: 0;
+    position: absolute;
+    width: 1.25rem;
+  }
+  &::after {
+    bottom: -0.375rem;
+  }
+  &::before {
+    top: -0.375rem;
+  }
 }
 
 @media screen and (min-width: unquote($bp-med-val)) {

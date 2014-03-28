@@ -7,5 +7,6 @@ WebFont.load({
 
 // responsive nav
 var nav = responsiveNav('.nav-collapse', {
-  label: 'Menu'
+  insert: 'after',
+  label: '<i class="icon-menu"></i> Menu'
 });

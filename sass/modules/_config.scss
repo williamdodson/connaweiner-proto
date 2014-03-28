@@ -44,6 +44,8 @@ $palettes: (
   // blue
   blue: (
     base: #2A69B2,
+    xx-light: lighten(#4588D3, 21),
+    x-light: lighten(#4588D3, 12),
     light: #4588D3,
     dark: #1E4C82
   ),
