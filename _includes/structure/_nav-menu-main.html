@@ -1,6 +1,6 @@
 <ul class="menu-main">
   {% for p in site.data._nav-menu %}
-  <li{% if  p.slug == page.slug %} class="current-page-item"{% endif %}>
+  <li{% if  p.slug == page.slug %} class="current-menu-item"{% endif %}>
     <a href="{% if p.slug != 'home' %}/{{ p.slug }}/{% else %}/{% endif %}">{{ p.name }}</a>
     {% if p.subpages %}
     <ul>
