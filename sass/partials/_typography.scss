@@ -304,9 +304,14 @@ hr {
 
 .content {
   
+  p:first-of-type,
   .leader {
     @extend .delta;
     color: palette(gray, dark);
+    
+    @include media($bp-lg-val) {
+      @include font-scale(mid-large);
+    }
   }
   
   @include media($bp-lg-val) {
