@@ -42,37 +42,26 @@ h1, h2, h3, h4, h5 {
   padding: 0;
 }
 h1, .alpha {
-  @include font-scale(mid-large);
-  margin-bottom: 1.5rem;
+  @include font-scale(mid);
   
   @include media($bp-med-val) {
-    @include font-scale(large);
+    @include font-scale(mid-large);
   }
   @include media($bp-lg-val) {
-    @include font-scale(x-large);
+    @include font-scale(large);
   }
 }
 h2, .beta {
   @include font-scale(mid);
   
   @include media($bp-med-val) {
-    @include font-scale(mid-large);
-  }
-  @include media($bp-lg-val) {
-    @include font-scale(large);
-  }
-}
-h3, .gamma {
-  @include font-scale(mid);
-  
-  @include media($bp-med-val) {
     @include font-scale(mid);
   }
   @include media($bp-lg-val) {
     @include font-scale(mid-large);
   }
 }
-h4, .delta {
+h3, .gamma {
   @include font-scale(base);
   
   @include media($bp-med-val) {
@@ -82,17 +71,13 @@ h4, .delta {
     @include font-scale(mid);
   }
 }
-h5, .epsilon {
+h4, .delta {
   @include font-scale(base);
 }
 h5 {
   color: palette(gray, dark);
   font-weight: 700;
   text-transform: uppercase;
-}
-h6, .zeta {
-  font-family: unquote(map-get($font-open-sans, stack));
-  @include font-scale(base);
 }
 h6 {
   color: palette(gray, dark);
@@ -303,16 +288,6 @@ hr {
 }
 
 .content {
-  
-  /*p:first-child,
-  .leader {
-    @extend .delta;
-    color: palette(gray, dark);
-    
-    @include media($bp-lg-val) {
-      @include font-scale(mid-large);
-    }
-  }*/
   
   @include media($bp-lg-val) {
     p, dl, ol, ul {
