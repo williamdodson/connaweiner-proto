@@ -867,6 +867,12 @@ optgroup::-moz-focus-inner {
   padding: 1.5rem 2.35765% 1.5rem 2.35765%;
 }
 
+.news-item {
+  border-bottom: 0.0625rem solid #dfe2e5;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.4375rem;
+}
+
 .hide {
   margin: -1px;
   padding: 0;
@@ -1272,6 +1278,13 @@ hr {
     font-size: 3rem;
     line-height: 1;
   }
+}
+
+.news-item h2 a {
+  text-decoration: none;
+}
+.news-item p:last-child {
+  margin-bottom: 0;
 }
 
 .required {

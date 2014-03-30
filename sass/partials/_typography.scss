@@ -357,6 +357,20 @@ hr {
   @extend %visuallyhidden;
 }
 
+.news-item {
+  @extend %separate;
+  
+  h2 {
+    a {
+      text-decoration: none;
+    }
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .required {
   color: palette(green);
   font-weight: bold;

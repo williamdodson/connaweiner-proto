@@ -25,6 +25,13 @@
   }
 }
 
+// separate items with a visual rule
+%separate {
+  border-bottom: 0.0625rem solid palette(gray, x-light);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.4375rem;
+}
+
 // visually hide elements
 %visuallyhidden {
   margin: -1px;
