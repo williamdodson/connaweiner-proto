@@ -304,7 +304,7 @@ hr {
 
 .content {
   
-  p:first-child,
+  /*p:first-child,
   .leader {
     @extend .delta;
     color: palette(gray, dark);
@@ -312,7 +312,7 @@ hr {
     @include media($bp-lg-val) {
       @include font-scale(mid-large);
     }
-  }
+  }*/
   
   @include media($bp-lg-val) {
     p, dl, ol, ul {
