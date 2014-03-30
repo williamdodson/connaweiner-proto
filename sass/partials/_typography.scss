@@ -61,6 +61,13 @@ h2, .beta {
     @include font-scale(mid-large);
   }
 }
+h2 {
+  margin-bottom: 1.333333rem;
+  
+  @include media($bp-lg-val) {
+    margin-bottom: 1.333333rem;
+  }
+}
 h3, .gamma {
   @include font-scale(base);
   
@@ -280,10 +287,14 @@ hr {
     text-shadow: 0.125rem 0.125rem 0 rgba($color-black, 0.12);
   }
   .lead-in {
-    @extend .gamma;
     color: palette(gray);
     font-style: italic;
     margin-bottom: 0;
+    @include font-scale(mid);
+    
+    @include media($bp-lg-val) {
+      @include font-scale(mid-large);
+    }
   }
 }
 

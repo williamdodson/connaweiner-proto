@@ -976,14 +976,23 @@ h2, .beta, .title {
   }
 }
 
-h3, .gamma, .heading-main .lead-in, .ancillary h2 {
+h2 {
+  margin-bottom: 1.333333rem;
+}
+@media screen and (min-width: 55em) {
+  h2 {
+    margin-bottom: 1.333333rem;
+  }
+}
+
+h3, .gamma, .ancillary h2 {
   font-size: 16px;
   /* font-size: 16 */
   font-size: 1rem;
   line-height: 1.5;
 }
 @media screen and (min-width: 40em) {
-  h3, .gamma, .heading-main .lead-in, .ancillary h2 {
+  h3, .gamma, .ancillary h2 {
     font-size: 18px;
     /* font-size: 18 */
     font-size: 1.125rem;
@@ -991,7 +1000,7 @@ h3, .gamma, .heading-main .lead-in, .ancillary h2 {
   }
 }
 @media screen and (min-width: 55em) {
-  h3, .gamma, .heading-main .lead-in, .ancillary h2 {
+  h3, .gamma, .ancillary h2 {
     font-size: 18px;
     /* font-size: 18 */
     font-size: 1.125rem;
@@ -1205,6 +1214,18 @@ hr {
   color: #727a82;
   font-style: italic;
   margin-bottom: 0;
+  font-size: 18px;
+  /* font-size: 18 */
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+@media screen and (min-width: 55em) {
+  .heading-main .lead-in {
+    font-size: 24px;
+    /* font-size: 24 */
+    font-size: 1.5rem;
+    line-height: 1;
+  }
 }
 
 @media screen and (min-width: 55em) {
