@@ -41,7 +41,7 @@
   font-weight: normal;
   speak: none;
   display: inline-block;
-  text-decoration: inherit;
+  text-decoration: none;
   width: 1rem;
   margin-right: 0.2rem;
   text-align: center;
@@ -1169,11 +1169,16 @@ label {
   display: block;
 }
 
+iframe,
 img,
 embed,
 object,
 video {
   max-width: 100%;
+}
+
+iframe {
+  width: 100%;
 }
 
 figure {

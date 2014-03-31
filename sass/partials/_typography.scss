@@ -230,11 +230,15 @@ label {
 
 // Misc
 //////////////////////////////////////////////////////////////////////
+iframe,
 img,
 embed,
 object,
 video {
 	max-width: 100%;
+}
+iframe {
+  width: 100%;
 }
 
 figure {

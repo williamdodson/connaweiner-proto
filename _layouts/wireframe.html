@@ -17,7 +17,11 @@
         </main>
         
         <aside class="ancillary" role="complementary">
-          {% include sidebar/sidebar-home.html %}
+          {% if page.slug == 'contact' %}
+            {% include sidebar/sidebar-contact.html %}
+          {% else %}
+            {% include sidebar/sidebar-home.html %}
+          {% endif %}
         </aside>
       </div>
     </div>
