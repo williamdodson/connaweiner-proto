@@ -1285,6 +1285,10 @@ hr {
   }
 }
 
+.ie-warning {
+  background: #cfd345;
+}
+
 .news-item h2 a {
   text-decoration: none;
 }

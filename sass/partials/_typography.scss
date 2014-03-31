@@ -361,6 +361,10 @@ hr {
   @extend %visuallyhidden;
 }
 
+.ie-warning {
+  background: $color-warning;
+}
+
 .news-item {
   @extend %separate;
   
