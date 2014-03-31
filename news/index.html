@@ -7,12 +7,9 @@ slug: news
 {% for n in site.data._news-items %}
 {% assign num_words = n.body | number_of_words %}
 <section class="news-item">
-  <h2><a href="#">{{ n.title }}</a></h2>
+  <h2>{{ n.title }}</h2>
   <p>
-    {{ n.body | truncatewords: 20 }} 
-    {% if num_words > 20  %}
-    <a href="#">Continue reading</a>.
-    {% endif; %}
+    {{ n.body }}
   </p>
 </section>
 {% endfor %}
