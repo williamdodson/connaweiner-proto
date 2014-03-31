@@ -34,7 +34,7 @@
     }
     
     &[href*="contact"] {
-      @extend .icon-phone-squared;
+      @extend .icon-contact;
       
       &:before {
         color: palette(green, x-light);
