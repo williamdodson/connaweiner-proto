@@ -328,11 +328,11 @@ hr {
   color: palette(misc);
   
   a {
-    color: $color-primary-light;
+    color: palette(blue, x-light);
     &:focus,
     &:hover,
     &:active {
-      color: $color-white;
+      color: palette(blue, xx-light);
     }
   }
 }
