@@ -1168,6 +1168,15 @@ form, input, textarea, button {
 label {
   display: block;
 }
+@media screen and (min-width: 40em) {
+  label.choice {
+    display: inline;
+    margin-right: 1em;
+  }
+  label.choice:last-child {
+    margin-right: 0;
+  }
+}
 
 iframe,
 img,

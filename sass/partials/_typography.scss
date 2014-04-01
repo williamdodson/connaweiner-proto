@@ -226,6 +226,17 @@ form, input, textarea, button {
 }
 label {
   display: block;
+  
+  &.choice {
+    @include media($bp-med-val) {
+      display: inline;
+      margin-right: 1em;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 // Misc
