@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5 {
 }
 h1, .alpha {
   @include font-scale(mid);
-  
+
   @include media($bp-med-val) {
     @include font-scale(mid-large);
   }
@@ -53,7 +53,7 @@ h1, .alpha {
 }
 h2, .beta {
   @include font-scale(mid);
-  
+
   @include media($bp-med-val) {
     @include font-scale(mid);
   }
@@ -66,7 +66,7 @@ h2 {
 }
 h3, .gamma {
   @include font-scale(base);
-  
+
   @include media($bp-med-val) {
     @include font-scale(mid);
   }
@@ -97,7 +97,7 @@ dl, ol, ul {
   margin-top: 1.5rem;
 }
 dl {
-  
+
   dt {
     color: palette(gray);
     @include font-scale(mid-large);
@@ -114,7 +114,7 @@ ul {
   padding-left: 1rem;
 }
 li {
-  
+
   p:last-child {
     margin-bottom: 0;
   }
@@ -124,15 +124,15 @@ blockquote {
   color: palette(gray);
   margin-bottom: 1.5rem;
   margin-left: 0;
-  
+
   p {
     @include font-scale(large, $font-open-sans);
   }
-  
+
   cite:before {
     content: '—';
   }
-  
+
   p:last-child {
     margin-bottom: 0;
   }
@@ -175,7 +175,7 @@ a:focus, a:hover, a:active {
   color: $color-links-secondary;
 }
 a {
-  
+
   abbr[title] {
     border: none;
     cursor: inherit;
@@ -187,28 +187,28 @@ a {
 table {
   margin-bottom: 1.5rem;
   width: 100%;
-  
+
   th,
   td {
     padding: 0.25em 0.5em;
   }
-  
+
   thead {
     tr {
       background: $color-primary;
       color: $color-white;
       font-weight: bold;
     }
-    
+
     th {
       border-right: 0.0625em solid $color-white;
-      
+
       &:last-child {
         border: none;
       }
     }
   }
-  
+
   tbody {
     tr {
       border-bottom: 0.0625em solid palette(gray, light);
@@ -226,12 +226,12 @@ form, input, textarea, button {
 }
 label {
   display: block;
-  
+
   &.choice {
     @include media($bp-med-val) {
       display: inline;
       margin-right: 1em;
-      
+
       &:last-child {
         margin-right: 0;
       }
@@ -268,13 +268,13 @@ hr {
   @extend .beta;
   margin: 0;
   text-align: center;
-  
+
   a {
     color: palette(misc);
     text-decoration: none;
     text-shadow: 0.125rem 0.125rem 0 rgba($color-black, 0.42);
   }
-  
+
   @include media($bp-med-val) {
     text-align: left;
   }
@@ -283,19 +283,19 @@ hr {
 // Primary
 //////////////////////////////////////////////////////////////////////
 .primary {
-  
+
   li {
     border-bottom: 0.0625rem solid palette(gray, x-light);
     margin-bottom: 0.75rem;
     padding-bottom: 0.6875rem;
-    
+
     &:last-child {
       border-bottom: none;
       margin-bottom: 0;
       padding-bottom: 0;
     }
   }
-  
+
   a {
     text-decoration: underline;
   }
@@ -311,7 +311,7 @@ hr {
     font-style: italic;
     margin-bottom: 0;
     @include font-scale(mid);
-    
+
     @include media($bp-lg-val) {
       @include font-scale(mid-large);
     }
@@ -319,10 +319,11 @@ hr {
 }
 
 .content {
-  
+
   @include media($bp-lg-val) {
     p, dl, ol, ul {
       @include font-scale(mid);
+      max-width: unquote($bp-med-val);
     }
   }
 }
@@ -337,7 +338,7 @@ hr {
 //////////////////////////////////////////////////////////////////////
 .bottom {
   color: palette(misc);
-  
+
   a {
     color: palette(blue, x-light);
     &:focus,
@@ -352,7 +353,7 @@ hr {
 //////////////////////////////////////////////////////////////////////
 .headshot {
   margin-bottom: 1.5rem;
-  
+
   img {
     border: 0.25rem solid palette(gray, light);
     border-radius: $base-border-radius;
@@ -362,7 +363,7 @@ hr {
 .giga {
   @include font-scale(large, $font-open-sans);
   margin: 0;
-  
+
   @include media($bp-med-val) {
     @include font-scale(x-large, $font-open-sans);
   }
@@ -378,13 +379,13 @@ hr {
 
 .news-item {
   @extend %separate;
-  
+
   h2 {
     a {
       text-decoration: none;
     }
   }
-  
+
   p:last-child {
     margin-bottom: 0;
   }
