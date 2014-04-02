@@ -1,7 +1,7 @@
 # Apache configuration file
 # httpd.apache.org/docs/2.2/mod/quickreference.html
 
-# Techniques in here adapted from all over, 
+# Techniques in here adapted from all over,
 #   including Kroc Camen: camendesign.com/.htaccess
 
 
@@ -43,7 +43,7 @@ AddType video/webm webm
 
 # Proper svg serving. Required for svg webfonts on iPad
 #   twitter.com/FontSquirrel/status/14855840545
-AddType image/svg+xml                 svg svgz 
+AddType image/svg+xml                 svg svgz
 
 # webfonts
 AddType application/vnd.ms-fontobject eot
@@ -53,7 +53,7 @@ AddType font/x-woff                   woff
 
 AddType text/cache-manifest           manifest
 
-# allow concatenation from within specific js and css files 
+# allow concatenation from within specific js and css files
 
 # e.g. Inside of script.combined.js you could have
 #   <!--#include file="jquery-1.4.2.js" -->
@@ -78,7 +78,7 @@ AddType text/cache-manifest           manifest
 <IfModule mod_deflate.c>
 
 # html, xml, css, and js:
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/x-javascript text/javascript application/javascript application/json 
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/x-javascript text/javascript application/javascript application/json
 
 # webfonts and svg:
   <FilesMatch "\.(ttf|otf|eot|svg)$" >
@@ -92,7 +92,7 @@ AddType text/cache-manifest           manifest
 # these are pretty far-future expires headers
 # they assume you control versioning with cachebusting query params like
 #   <script src="application.js?20100608">
-# additionally, consider that outdated proxies may miscache 
+# additionally, consider that outdated proxies may miscache
 #   www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
 
 # if you don't use filenames to version, lower the css and js to something like
@@ -108,14 +108,14 @@ AddType text/cache-manifest           manifest
 # cache.manifest needs re-reqeusts in FF 3.6 (thx Remy ~Introducing HTML5)
   ExpiresByType text/cache-manifest       "access plus 0 seconds"
 
-# your document html 
+# your document html
   ExpiresByType text/html                  "access"
 
 # rss feed
   ExpiresByType application/rss+xml       "access plus 1 hour"
 
 # favicon (cannot be renamed)
-  ExpiresByType image/vnd.microsoft.icon  "access plus 1 week" 
+  ExpiresByType image/vnd.microsoft.icon  "access plus 1 week"
 
 # media: images, video, audio
   ExpiresByType image/png                 "access plus 1 month"
@@ -124,12 +124,12 @@ AddType text/cache-manifest           manifest
   ExpiresByType video/ogg                 "access plus 1 month"
   ExpiresByType audio/ogg                 "access plus 1 month"
   ExpiresByType video/mp4                 "access plus 1 month"
-  
+
 # webfonts
   ExpiresByType font/ttf                  "access plus 1 month"
   ExpiresByType font/woff                 "access plus 1 month"
   ExpiresByType image/svg+xml             "access plus 1 month"
-  
+
 # css and javascript
   ExpiresByType text/css                  "access plus 1 month"
   ExpiresByType application/javascript    "access plus 1 month"
@@ -166,9 +166,9 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
 # without -MultiViews, Apache will give a 404 for a rewrite if a folder of the same name does not exist (e.g. “/blog/hello”)
 #   webmasterworld.com/apache/3808792.htm
-Options -MultiViews 
+Options -MultiViews
 # -Indexes will have Apache block users from browsing folders without a default document
-# Options -Indexes
+Options -Indexes
 
 
 
